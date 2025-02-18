@@ -87,11 +87,12 @@ public class Driver1 {
         // Sort courses by courseCode (ascending order)
         Collections.sort(courses, Comparator.comparing(Course::getCode));
 
-        // Sort students by studentId (ascending order)
-        Collections.sort(students, Comparator.comparing(Student::getStudentId));
+        // Sort students by studentId (descending order)
+        Collections.sort(students, (s1, s2) -> s2.getStudentId().compareTo(s1.getStudentId()));
 
-        // Sort enrollments by courseId and studentId (ascending order)
-        Collections.sort(enrollments, Comparator.comparing(Enrollment::getCourseId).thenComparing(Enrollment::getStudentId));
+        // Sort enrollments by academicYear (descending), then courseId and studentId (ascending)
+        Collections.sort(enrollments, Comparator.comparing(Enrollment::getAcademicYear).reversed()
+                .thenComparing(Enrollment::getCourseId).thenComparing(Enrollment::getStudentId));
 
         // Print all courses
         for (Course course : courses) {
