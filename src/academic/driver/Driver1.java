@@ -4,6 +4,8 @@ import academic.model.Course;
 import academic.model.Student;
 import academic.model.Enrollment;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Driver1 {
@@ -82,19 +84,28 @@ public class Driver1 {
             }
         }
 
+        // Sort courses by courseCode (ascending order)
+        Collections.sort(courses, Comparator.comparing(Course::getCode));
+
+        // Sort students by studentId (ascending order)
+        Collections.sort(students, Comparator.comparing(Student::getStudentId));
+
+        // Sort enrollments by courseId and studentId (ascending order)
+        Collections.sort(enrollments, Comparator.comparing(Enrollment::getCourseId).thenComparing(Enrollment::getStudentId));
+
         // Print all courses
         for (Course course : courses) {
-            System.out.println(course);
+            System.out.println(course.getCode() + "|" + course.getName() + "|" + course.getCredit() + "|" + course.getGrade());
         }
 
         // Print all students
         for (Student student : students) {
-            System.out.println(student);
+            System.out.println(student.getStudentId() + "|" + student.getName() + "|" + student.getEnrollmentYear() + "|" + student.getMajor());
         }
 
         // Print all enrollments
         for (Enrollment enrollment : enrollments) {
-            System.out.println(enrollment);
+            System.out.println(enrollment.getCourseId() + "|" + enrollment.getStudentId() + "|" + enrollment.getAcademicYear() + "|" + enrollment.getSemester() + "|None");
         }
 
         scanner.close();
