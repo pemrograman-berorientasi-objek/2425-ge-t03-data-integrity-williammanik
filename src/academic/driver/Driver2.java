@@ -1,10 +1,5 @@
 package academic.driver;
 
-/**
- * @author NIM Nama
- * @author NIM Nama
- */
-
 import academic.model.Course;
 import academic.model.Student;
 import academic.model.Enrollment;
