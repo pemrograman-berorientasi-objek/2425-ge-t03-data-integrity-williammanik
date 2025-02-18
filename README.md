@@ -22,7 +22,8 @@ Pada saat melaporkan (>10 min.):
 
 ## Task 03: Test It Up (20 pts)
 
-Semua perubahan yang dilakukan pada **Task 01** dan **Task 02** akan memengaruhi source code anda. Codebase akan diuji dengan menggunakan spesifikasi yang sama dengan **T02**. Untuk keperluan pengujian, tuliskan driver class yang anda hasilkan pada **T02 (Task 04)** ke ```academic.driver.Driver1``` di tugas ini. Anda harus menjamin bahwa tidak terjadi duplikasi data baik pada ```course```, ```student```, dan ```enrollment```. Bila ada upaya yang memungkinkan terjadinya duplikasi data maka upaya tersebut akan dibatalkan dan program akan meneruskan eksekusi.
+Semua perubahan yang dilakukan pada **Task 01** dan **Task 02** akan memengaruhi source code anda. Codebase akan diuji dengan menggunakan spesifikasi yang sama dengan **T02**. Untuk keperluan pengujian, tuliskan driver class yang anda hasilkan pada 
+**T02 (Task 04)** ke ```academic.driver.Driver1``` di tugas ini. Anda harus menjamin bahwa tidak terjadi duplikasi data baik pada ```course```, ```student```, dan ```enrollment```. Bila ada upaya yang memungkinkan terjadinya duplikasi data maka upaya tersebut akan dibatalkan dan program akan meneruskan eksekusi.
 
 ## Task 04: When Things Go Wrong (30 pts)
 
