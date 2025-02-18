@@ -118,6 +118,9 @@ public class Driver2 {
         // Sort students by studentId (ascending order)
         Collections.sort(students, Comparator.comparing(Student::getStudentId));
 
+        // Sort enrollments by courseId and studentId (ascending order)
+        Collections.sort(enrollments, Comparator.comparing(Enrollment::getCourseId).thenComparing(Enrollment::getStudentId));
+
         // Print all courses
         for (Course course : courses) {
             System.out.println(course.getCode() + "|" + course.getName() + "|" + course.getCredit() + "|" + course.getGrade());
